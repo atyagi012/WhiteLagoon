@@ -9,6 +9,7 @@ namespace WhiteLagoon.Domain.Entities
     public class Villa
     {
         public int Id { get; set; }
-        public 
+        public required string Name { get; set; }
+
     }
 }
