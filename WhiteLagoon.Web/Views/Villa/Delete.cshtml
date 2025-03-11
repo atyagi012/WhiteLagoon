@@ -1,0 +1,70 @@
+﻿@model Villa
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-success bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Delete Villa</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-body border p-4">
+    <form method="post" class="row">
+        <input asp-for="@Model.Id" hidden />
+        <div class="p-3">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="@Model.Name" disabled class="form-control border shadow" placeholder="Name" />
+                <label asp-for="Name" class="ms-1">Name</label>
+               
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="@Model.Description" disabled class="form-control border shadow" placeholder="Description" />
+                <label asp-for="Description" class="ms-1">Description</label>
+               
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="@Model.Price" disabled class="form-control border shadow" placeholder="Price" />
+                <label asp-for="Price" class="ms-1">Price</label>
+   
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="@Model.Sqft" disabled class="form-control border shadow" placeholder="Sqft" />
+                <label asp-for="Sqft" class="ms-1">Sqft</label>
+               
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="@Model.Occupancy" disabled class="form-control border shadow" placeholder="Occupancy" />
+                <label asp-for="Occupancy" class="ms-1">Occupancy</label>
+                
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="@Model.ImageUrl" disabled class="form-control border shadow" placeholder="ImageUrl" />
+                <label asp-for="ImageUrl" class="ms-1">ImageUrl</label>
+                
+            </div>
+
+            <div class="row pt-2">
+                <div class="col-6 col-md-3">
+                    <button type="submit" class="btn btn-danger w-100">
+                        <i class="bi bi-trash-fill"></i> Delete
+                    </button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-controller="Villa" asp-action="Index" class="btn btn-secondary w-100">
+                        <i class="bi bi-x-circle"></i> Cancel
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
