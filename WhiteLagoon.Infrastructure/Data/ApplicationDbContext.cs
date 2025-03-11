@@ -111,8 +111,7 @@ namespace WhiteLagoon.Infrastructure.Data
                     Villa_Number = 302,
                     Id = 3,
                     
-                }
-                );
+                });
         }   
     }
 }
